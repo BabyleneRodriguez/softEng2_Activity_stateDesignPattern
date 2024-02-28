@@ -1,20 +1,50 @@
 public class ClosedState implements AccountState
 {   
-    public void activateState(Account account){
-        System.out.println("You can't activate a closed account!");
-    };
-
-    public void suspendState(Account account){
-        System.out.println("You can't suspend a closed account!");
-    };
-    public void closeState(Account account){
-        System.out.println("Account already closed");
-    };
     
-    public void deposit(Double depositAmount, Account account){
-        System.out.println("You can't deposit with a closed account!");
-    };
-    public void withdraw(Double withdrawAmount, Account account){
-        System.out.println("You can't witdhraw with a closed account!");
-    };
+    @Override
+    public void activate(Account account) 
+    {
+        // TODO Auto-generated method stub
+        account.setState(new ClosedState());
+        System.out.println("You cannot activate a closed account!");
+    }
+
+    @Override
+    public void suspend(Account account) 
+    {
+        // TODO Auto-generated method stub
+        account.setState(new ClosedState());
+        System.out.println("You cannot suspend a closed account!");
+    }
+
+    @Override
+    public void closed(Account account) 
+    {
+        // TODO Auto-generated method stub
+        account.setState(new ClosedState());
+        System.out.println("Account is already closed");
+    }
+
+    @Override
+    public void withdraw(Double withdrawAmount, Account account) 
+    {
+        // TODO Auto-generated method stub
+        System.out.println("You cannot witdhraw with a closed account!");
+        System.out.println(account.toString());
+        account.close();
+    }
+
+    @Override
+    public void deposit(Double depositAmount, Account account) 
+    {
+        // TODO Auto-generated method stub
+        System.out.println("You cannot deposit with a closed account!");
+        System.out.println(account.toString());
+        account.close();
+    }
+
+   
+
+
+    
 }

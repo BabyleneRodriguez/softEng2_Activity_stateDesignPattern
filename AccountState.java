@@ -1,9 +1,9 @@
 public interface AccountState
 {
-    public withdraw(Double withdrawAmount, Account account);
-    public deposit(Double depositAmount, Account account);
+    public void activate (Account account);
+    public void suspend (Account account);
+    public void closed (Account account);
 
-    public activate(AccountState accountState);
-    public suspend(AccountState accountState);
-    public closed(AccountState accountState);
+    public void withdraw (Double withdrawAmount, Account account);
+    public void deposit (Double depositAmount, Account account);
 }

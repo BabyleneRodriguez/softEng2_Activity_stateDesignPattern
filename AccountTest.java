@@ -1,8 +1,11 @@
 
-public class AccountTest{
-    public static void main (String[] args){
+public class AccountTest
+{
+    public static void main (String[] args)
+    {
     
         Account myAccount = new Account("1234", 10000.0); 
+        
             myAccount.activate();      
             myAccount.suspend(); 
             myAccount.activate();
@@ -13,5 +16,6 @@ public class AccountTest{
             myAccount.activate();
             myAccount.withdraw(500.0);
             myAccount.deposit(1000.0);
+                  
     }
-    }
+}
