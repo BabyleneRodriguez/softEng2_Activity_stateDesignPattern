@@ -66,6 +66,6 @@ public class Account
 
     public String toString()
     {
-        return "\tAccount Number: " + accountNumber + "\n" + "\tBalance: " + balance;
+        return "--- ACCOUNT DETAILS:\n" + "\tAccount Number: " + accountNumber + "\n" + "\tBalance: " + balance + "\n";
     }
 }
